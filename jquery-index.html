@@ -42,13 +42,11 @@
 
       // WHEN I scroll down
       // THEN I am presented with time blocks for standard business hours
-      var currentHour = (new Date()).getHours();
+      var currentHour = new Date().getHours();
       console.log("Current hour is: " + currentHour + ":00");
-      //var hourIndex = 0;
       var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
       function dailySchedule() {
-        //var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
         for (var i = 0; i < myDailyHours.length; i++) {
           console.log(myDailyHours[i]);
           createTimeContainer();
@@ -76,12 +74,20 @@
           var saveBtn = $("<i>").addClass("fa fa-save");
           saveBtn.css("font-size", "30px");
           saveBtnContainer.append(saveBtn);
-        }
 
-      // WHEN I view the time blocks for that day
-      // THEN each time block is color-coded to indicate whether it is in the past, present, or future.
-      
-      
+          // WHEN I view the time blocks for that day
+          // THEN each time block is color-coded to indicate whether it is in the past, present, or future.
+          if (currentHour === myDailyHours[i]) {
+            console.log("red");
+            textDescription.addClass("present");
+          } else if (currentHour > myDailyHours[i]) {
+            console.log("grey");
+            textDescription.addClass("past");
+          } else {
+            console.log("green");
+            textDescription.addClass("future");
+          }
+        }
       }
       // Execute function dailySchedule
       dailySchedule();
