@@ -21,10 +21,14 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
+
+  .main-container {
+    text-align: center;
+  }
   
   .description{
     white-space: pre-wrap;
-    width: 85%;
+    width: 80%;
   }
   
   .time-block{
@@ -84,3 +88,8 @@ body {
     transition: all .3s ease-in-out;
   }
 
+  @media screen and (max-width: 529px){
+    .description{
+      width: 70%;
+    }
+  }
