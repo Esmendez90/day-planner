@@ -44,10 +44,11 @@
       // THEN I am presented with time blocks for standard business hours
       var currentHour = (new Date()).getHours();
       console.log("Current hour is: " + currentHour + ":00");
+      //var hourIndex = 0;
       var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
       function dailySchedule() {
-        // var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+        //var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
         for (var i = 0; i < myDailyHours.length; i++) {
           console.log(myDailyHours[i]);
           createTimeContainer();
@@ -79,9 +80,7 @@
 
       // WHEN I view the time blocks for that day
       // THEN each time block is color-coded to indicate whether it is in the past, present, or future.
-      if (currentHour === myDailyHours[i]){
-        textDescription.
-      }
+      
       
       }
       // Execute function dailySchedule
