@@ -62,9 +62,9 @@ function dailySchedule() {
 
     if (element.matches("button") === true) {
       event.preventDefault();
-      
+
       var dailytask = element.previousElementSibling.value;
-      
+
       var storage = JSON.parse(localStorage.getItem("my-tasks"));
       storage.push(dailytask);
       localStorage.setItem("my-tasks", JSON.stringify(storage));
@@ -80,7 +80,7 @@ function renderTasks() {
   console.log(storage);
   for (var i = 0; i < storage.length; i++) {
     console.log(storage[i]);
-    $("#" + i).text(storage[i]); 
+    $("#" + i).text(storage[i]);
   }
 }
 
