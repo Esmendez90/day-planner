@@ -64,20 +64,22 @@ function dailySchedule() {
       event.preventDefault();
 
       var dailytask = element.previousElementSibling.value;
+      console.log(dailytask);
 
       var storage = JSON.parse(localStorage.getItem("my-tasks"));
+      console.log(storage);
       storage.push(dailytask);
       localStorage.setItem("my-tasks", JSON.stringify(storage));
       renderTasks();
     }
   });
 }
+
 // WHEN I refresh the page
 // THEN the saved events persist
 function renderTasks() {
   var storage = JSON.parse(localStorage.getItem("my-tasks"));
-
-  console.log(storage);
+  console.log(storage.length);
   for (var i = 0; i < storage.length; i++) {
     console.log(storage[i]);
     $("#" + i).text(storage[i]);
