@@ -34,8 +34,8 @@ The day planner application should have the following:
 
 ## Screenshots
 
-<img src="images/dayplanner1.png" alt="Day planner" width="80%" height="75%">
-<img src="images/dayplanner2.png" alt="Day planner" width="80%" height="75%">
+<img src="assets/images/dayplanner1.png" alt="Day planner" width="80%" height="75%">
+<img src="assets/images/dayplanner2.png" alt="Day planner" width="80%" height="75%">
 
 ## Link to Page
 
