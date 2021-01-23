@@ -59,13 +59,12 @@ function dailySchedule() {
   $("main").click(function (event) {
     event.preventDefault();
     var element = event.target;
-    //console.log(element);
 
     if (element.matches("button") === true) {
       event.preventDefault();
-      //console.log("this is a button");
+
       var dailytask = element.previousElementSibling.value;
-      //console.log(dailytask);
+
       var storage = JSON.parse(localStorage.getItem("my-tasks"));
       storage.push(dailytask);
       localStorage.setItem("my-tasks", JSON.stringify(storage));
@@ -77,7 +76,6 @@ function dailySchedule() {
 // THEN the saved events persist
 function renderTasks() {
   var storage = JSON.parse(localStorage.getItem("my-tasks"));
-  //event.preventDefault();
   console.log(storage);
   for (var i = 0; i < storage.length; i++) {
     console.log(storage[i]);
