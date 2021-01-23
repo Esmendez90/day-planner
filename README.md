@@ -34,13 +34,12 @@ The day planner application will render the following:
 
 ## Screenshots
 
-<img src="images/start-button.png" alt="Start Button" width="80%" height="75%">
-<img src="images/question-choices.png" alt="Quiz" width="80%" height="75%">
-<img src="images/scoreboard.png" alt="Scoreboard" width="80%" height="75%">
+<img src="images/dayplanner1.png" alt="Day planner" width="80%" height="75%">
+<img src="images/dayplanner2.png" alt="Day planner" width="80%" height="75%">
 
 ## Link to Page
 
-<https://esmendez90.github.io/quiz-code/>
+<https://esmendez90.github.io/day-planner/>
 
 ## Tools
 
