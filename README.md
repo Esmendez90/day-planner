@@ -1,35 +1,49 @@
-# day-planner
-# Instructor's Hints
+# Day Planner
 
-## Date Object API
+## User Story
 
-I highly recommend that you guys use the date object as it is relatively easy
-to use and will be on more interviews than MomentJS will be. It is mainly
-because it is part of the native JS engine functionality.
+AS a student developer and full-time  employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively.
 
-```
-var mons = ["Jan", "Feb", "Mar"];
-mons[(new Date()).getMonth()]
+## Table of Content
 
-"Jan"
+* [Motivation](#motivation)
+* [Description](#description)
+* [Requirements](#requirements)
+* [Screenshots](#screenshots)
+* [Link to Page](#link-to-page)
+* [Tools](#tools)
 
-var days = ["Sunday", "Monday", "Tuesday"];
-days[(new Date()).getDay()]
+## Motivation
 
-"Tuesday"
+I want to create a day planner application that allows me to keep track of the daily tasks that I have to get done. 
 
-if(i === 12){
-    chosenTag.css(["background-color", "red"]);
-    chosenTag.addClass("red-class");
-}
-if((new Date()).getHours() === i){ // uses military time 0-23 for hours
-    chosenTag.addClass("red-class");
-}
-```
+## Description
 
-## List of things needed
+Create a simple calendar application that allows the user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-* jQuery
-* Momentjs is allowed but not required
-* Date object usage is preferred
-* css classes/rules will need to be applied
+## Requirements 
+
+The day planner application will render the following:
+
+* When I open the planner, then the current day is displayed at the top of the calendar.
+* When I scroll down, then I am presented with time blocks for standard business hours.
+* WhenI view the time blocks for that day, then each time block is color-coded to indicate whether it is in the past, present, or future.
+* When I click into a time block, then I can enter a task.
+* When I click the save button for that time block, then the text for that event is saved in local storage.
+* When I refresh the page, then the saved events persist.
+
+## Screenshots
+
+<img src="images/start-button.png" alt="Start Button" width="80%" height="75%">
+<img src="images/question-choices.png" alt="Quiz" width="80%" height="75%">
+<img src="images/scoreboard.png" alt="Scoreboard" width="80%" height="75%">
+
+## Link to Page
+
+<https://esmendez90.github.io/quiz-code/>
+
+## Tools
+
+* Visual Studio Code <https://code.visualstudio.com>.
+* Chrome DevTools - Inspect
+ 
