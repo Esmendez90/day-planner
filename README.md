@@ -44,5 +44,5 @@ The day planner application should have the following:
 ## Tools
 
 * Visual Studio Code <https://code.visualstudio.com>.
-* Chrome DevTools - Inspect
+* Chrome DevTools - Inspect.
  
