@@ -26,9 +26,7 @@ function dailySchedule() {
     hourContainer.text(myDailyHours[i] + ":00");
 
     // Create a textarea tag and append it to the container
-    var textDescription = $("<textarea>")
-      .addClass("description")
-      .attr("data-index", i);
+    var textDescription = $("<textarea>").addClass("description").attr("id", i);
     container.append(textDescription);
 
     // Create a button tag and append it to the container
@@ -64,6 +62,7 @@ function dailySchedule() {
     //console.log(element);
 
     if (element.matches("button") === true) {
+      event.preventDefault();
       //console.log("this is a button");
       var dailytask = element.previousElementSibling.value;
       //console.log(dailytask);
@@ -73,24 +72,23 @@ function dailySchedule() {
       renderTasks();
     }
   });
-
-  function renderTasks() {
-    var storage = JSON.parse(localStorage.getItem("my-tasks"));
-    event.preventDefault();
-    console.log(storage);
-    for (var i = 0; i < storage.length; i++) {
-      console.log(storage[i]);
-      $("textarea").text(storage[i]); //NEED HELP WITH THIS!!!!
-    }
+}
+// WHEN I refresh the page
+// THEN the saved events persist
+function renderTasks() {
+  var storage = JSON.parse(localStorage.getItem("my-tasks"));
+  //event.preventDefault();
+  console.log(storage);
+  for (var i = 0; i < storage.length; i++) {
+    console.log(storage[i]);
+    $("#" + i).text(storage[i]);
   }
 }
 
 // Execute function dailySchedule
 dailySchedule();
+renderTasks();
 
 if (localStorage.getItem("my-tasks") === null) {
   localStorage.setItem("my-tasks", JSON.stringify([]));
 }
-
-// WHEN I refresh the page
-// THEN the saved events persist
