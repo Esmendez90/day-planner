@@ -64,10 +64,8 @@ function dailySchedule() {
       event.preventDefault();
 
       var dailytask = element.previousElementSibling.value;
-      console.log(dailytask);
 
       var storage = JSON.parse(localStorage.getItem("my-tasks"));
-      console.log(storage);
       storage.push(dailytask);
       localStorage.setItem("my-tasks", JSON.stringify(storage));
       renderTasks();
@@ -88,8 +86,10 @@ function renderTasks() {
 
 // Execute function dailySchedule
 dailySchedule();
-renderTasks();
 
+// Upon loading the page if there isn't a localStorage,
+// then a localStorage my-tasks will be created
 if (localStorage.getItem("my-tasks") === null) {
   localStorage.setItem("my-tasks", JSON.stringify([]));
 }
+renderTasks();
