@@ -5,7 +5,6 @@ $("#currentDay").text(new Date());
 // WHEN I scroll down
 // THEN I am presented with time blocks for standard business hours
 var currentHour = new Date().getHours();
-console.log("Current hour is: " + currentHour + ":00");
 var myDailyHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 function dailySchedule() {
@@ -77,9 +76,7 @@ function dailySchedule() {
 // THEN the saved events persist
 function renderTasks() {
   var storage = JSON.parse(localStorage.getItem("my-tasks"));
-  console.log(storage.length);
   for (var i = 0; i < storage.length; i++) {
-    console.log(storage[i]);
     $("#" + i).text(storage[i]);
   }
 }
