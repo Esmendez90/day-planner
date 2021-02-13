@@ -33,7 +33,7 @@ function dailySchedule() {
     container.append(saveBtnContainer);
 
     // Create an i tag and append it to the saveBtnContainer
-    var saveBtn = $("<i>").addClass("fa fa-save");
+    var saveBtn = $("<i>").addClass("saveTask fa fa-save");
     saveBtn.css("font-size", "30px");
     saveBtnContainer.append(saveBtn);
 
@@ -59,13 +59,15 @@ function dailySchedule() {
     event.preventDefault();
     var element = event.target;
 
-    if (element.matches("button") === true) {
+    if (element.matches(".saveTask") === true) {
       event.preventDefault();
 
-      var dailytask = element.previousElementSibling.value;
+      var getParent = element.parentNode;
+
+      var getTask = getParent.previousElementSibling.value;
 
       var storage = JSON.parse(localStorage.getItem("my-tasks"));
-      storage.push(dailytask);
+      storage.push(getTask);
       localStorage.setItem("my-tasks", JSON.stringify(storage));
       renderTasks();
     }
