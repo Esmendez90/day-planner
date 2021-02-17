@@ -21,10 +21,6 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
-
-  .main-container {
-    text-align: center;
-  }
   
   .description{
     white-space: pre-wrap;
@@ -94,5 +90,17 @@ body {
   @media screen and (max-width: 529px){
     .description{
       width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 363px){
+    .description{
+      width: 65%;
+    }
+  }
+
+  @media screen and (max-width: 316px){
+    .description{
+      width: 60%;
     }
   }
